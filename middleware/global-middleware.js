@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   generateToken,
   restrictedUser,
-  // checkRole,
+  checkRole,
 };
 
 function generateToken(user) {
@@ -12,7 +12,7 @@ function generateToken(user) {
     subID: user.id,
     name: user.username,
     email: user.email,
-    role: user.role,
+    role: user.role_id,
   };
   const options = {
     expiresIn: "1h",

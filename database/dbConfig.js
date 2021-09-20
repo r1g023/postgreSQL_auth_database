@@ -1,8 +1,6 @@
-PORT = 5000;
-JWT_SECRET = "It's a token secret";
+require("dotenv").config();
+const knex = require("knex");
+const config = require("../knexfile");
 
-NODE_ENV = development;
-DEV_DATABASE_URL =
-  "postgresql://postgres:Oneandonly1*@localhost:5432/jwt-postgresql-db";
-TESTING_DATABASE_URL =
-  "postgresql://postgres:Oneandonly1*@localhost:5432/jwt-postgresql-db_test";
+const enviroment = process.env.NODE_ENV || "development";
+module.exports = knex(config[enviroment]);
