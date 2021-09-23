@@ -43,7 +43,7 @@ function restrictedUser() {
 
 function checkRole(user) {
   return (req, res, next) => {
-    if (req.decodedToken.role === "admin") {
+    if (req.decodedToken.role === 1 || "admin") {
       next();
     } else {
       console.log(
