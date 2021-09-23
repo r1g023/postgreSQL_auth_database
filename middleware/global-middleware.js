@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
 module.exports = {
@@ -41,9 +41,9 @@ function restrictedUser() {
   };
 }
 
-function checkRole(user) {
+function checkRole() {
   return (req, res, next) => {
-    if (req.decodedToken.role === 1 || "admin") {
+    if (req.decodedToken.role === "user") {
       next();
     } else {
       console.log(
