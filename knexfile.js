@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const pg = require("pg");
 
 if (process.env.DATABASE_URL) {
@@ -27,5 +27,5 @@ module.exports = {
   },
 };
 
-//jwt-postgresql-db
-//jwt-postgresql-db_test
+//users_auth_db
+//users_auth_db_testing
