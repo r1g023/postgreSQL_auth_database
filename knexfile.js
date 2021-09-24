@@ -12,6 +12,7 @@ const sharedConfig = {
 };
 
 module.exports = {
+  //locally on PG admin
   development: {
     ...sharedConfig,
     connection: process.env.DEV_DATABASE_URL,
@@ -20,6 +21,7 @@ module.exports = {
     ...sharedConfig,
     connection: process.env.TESTING_DATABASE_URL,
   },
+  //Deployed
   production: {
     ...sharedConfig,
     connection: process.env.DATABASE_URL,
