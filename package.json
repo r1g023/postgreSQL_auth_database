@@ -10,10 +10,10 @@
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "rollback": "knex migrate:rollback",
-    "migrateh": "heroku run knex migrate:latest -a APP NAME",
-    "rollbackh": "heroku run knex migrate:rollback -a APP NAME",
-    "seedh": "heroku run knex seed:run -a APP NAME",
-    "databaseh": "heroku pg:psql -a APP NAME",
+    "migrateh": "heroku run knex migrate:latest -a postgresql-auth-production",
+    "rollbackh": "heroku run knex migrate:rollback -a postgresql-auth-production",
+    "seedh": "heroku run knex seed:run -a postgresql-auth-production",
+    "databaseh": "heroku pg:psql -a postgresql-auth-production",
     "deploy": "git push heroku main"
   },
   "engines": {
@@ -45,11 +45,11 @@
     "knex": "^0.95.11",
     "knex-cleaner": "^1.3.1",
     "morgan": "^1.10.0",
-    "npm": "^7.24.0",
+    "npm": "^7.24.1",
     "pg": "^8.7.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.13"
   }
 }
